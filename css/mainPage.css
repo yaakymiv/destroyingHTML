@@ -1,0 +1,231 @@
+@font-face {
+    font-family: "Gilroy";
+    src:
+        url('../font/Gilroy-Regular.eot') format('embedded-opentype'),
+        url('../font/Gilroy-Regular.ttf') format('truetype'),
+        url('../font/Gilroy-Regular.woff') format('woff'),
+        url('../font/Gilroy-Regular.woff2') format('woff2');
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+}
+
+section{
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+h2{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h3{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+p{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 400;
+}
+
+button{
+    display: inline-flex;
+    padding: 17px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+#logo{
+    margin:19px 0px 19px 165px;
+}
+
+.nav_bar{
+    display: flex;
+    align-items: center;
+}
+
+.nav_bar_list{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav_bar_list li:last-child{
+    margin-right: 74px; 
+}
+
+.nav_bar_list a{
+color: var(--black, #141414);
+font-family: Gilroy;
+font-size: 16px;
+font-weight: 400;
+line-height: 100%;
+text-decoration: none;
+margin-right: 44px;
+}
+
+
+.nav_bar button{
+border-radius: 10px;
+border: 1px solid var(--black, #141414);
+background-color: white;
+}
+
+.nav_bar p{
+margin-left: 33px;
+color: var(--black, #141414);
+font-size: 14px;
+}
+
+#arrow_down{
+margin-right: 166px;
+width: 8px;
+height: 4px;
+flex-shrink: 0;
+stroke-width: 1px;
+stroke: var(--black, #141414);
+}
+
+/* visit card */
+
+.visit_card_left{
+    margin-top: 181px;
+    padding-left: 165px;
+    margin-bottom: 180px;
+}
+
+
+.visit_card_left h1{
+width: 600px;
+height: 88px;
+padding-right: 95px;
+
+color: var(--black, #141414);
+line-height: 110%;
+}  
+
+.visit_card_left p{
+    width: 291px;
+    height: 51px;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.visit_card_left button{
+color: white;
+border-radius: 10px;
+background: var(--black, #141414);
+margin-top: 40px;
+}
+
+.visit_card-right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .visit_card-right img {
+    position: relative;
+  }
+
+  #rect2 {
+    top: -41px;
+    left: 41px;
+  }
+  
+  #rect3 {
+    top: 87px;
+    left: -73px;
+  }
+  
+  #rect4 {
+    top: 128px;
+    left: -396px;
+  }  
+  
+
+ /* reasons */
+
+ .reasons_left{
+    padding: 80px 0px 400px 165px;
+    display: flex;
+    flex-direction: column;
+}
+
+#s1_h2{
+    width: 350px;
+    height: 72px;
+}
+
+.reasons_right ul{
+    padding: 199px 206px 80px 115px;
+    column-count:2;
+    column-gap: 110px;
+    list-style: none;
+    align-items: center;
+    /* background-color: lightcoral; */
+}
+
+.reasons_right li{
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#res1{width: 228px;padding:0px 0px 17px 0px}
+#res2{padding:17px 0px 17px 0px}
+#res3{padding:16px 0px 16px 0px}
+#res4{padding:17px 0px 17px 0px}
+#res5{padding:8px 0px 8px 0px}
+#res6{padding:16px 0px 16px 0px}
+
+#sad1{
+    position: absolute;
+    left: 545px; top: 882px;
+}
+
+#sad2{
+    position: absolute;
+    left: 545px; top: 992px;
+}
+#sad3{
+    position: absolute;
+    left: 545px; top: 1102px;
+}
+#sad4{
+    position: absolute;
+    left: 925px; top: 882px;
+}
+#sad5{
+    position: absolute;
+    left: 925px; top: 992px;
+}
+#sad6{
+    position: absolute;
+    left: 925px; top: 1102px;
+}
