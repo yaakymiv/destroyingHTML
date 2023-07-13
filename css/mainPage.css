@@ -21,6 +21,7 @@ section{
 }
 
 h1 {
+    color: var(--black, #141414);
     font-family: Gilroy;
     font-style: normal;
     font-weight: 700;
@@ -28,6 +29,7 @@ h1 {
   }
 
 h2{
+    color: var(--black, #141414);
     font-family: Gilroy;
     font-style: normal;
     font-weight: 700;
@@ -35,19 +37,22 @@ h2{
 }
 
 h3{
+    color: var(--black, #141414);
     font-family: Gilroy;
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 p{
+    color: var(--black, #141414);
     font-family: Gilroy;
     font-style: normal;
     font-weight: 400;
 }
 
 button{
+    color: var(--black, #141414);
     display: inline-flex;
     padding: 17px 30px;
     justify-content: center;
@@ -89,7 +94,6 @@ font-weight: 400;
 line-height: 100%;
 text-decoration: none;
 margin-right: 44px;
-background-color: blue;
 }
 
 
@@ -128,7 +132,6 @@ width: 600px;
 height: 88px;
 padding-right: 95px;
 
-color: var(--black, #141414);
 line-height: 110%;
 }  
 
@@ -136,7 +139,6 @@ line-height: 110%;
     width: 291px;
     height: 51px;
     padding-top: 20px;
-    font-size: 14px;
 }
 
 .visit_card_left button{
@@ -174,59 +176,104 @@ margin-top: 40px;
  /* reasons */
 
  .reasons_left{
-    padding: 80px 0px 400px 165px;
-    display: flex;
-    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 400px;
+    padding-left: 165px;
 }
 
-#s1_h2{
+.reasons_left h2{
+    line-height: 120%;
     width: 350px;
     height: 72px;
 }
 
 .reasons_right ul{
-    padding: 199px 206px 80px 115px;
-    column-count:2;
-    column-gap: 110px;
+    display: grid;
+    margin: 199px 206px 80px 30px;
+    grid-template-columns: repeat(2, 3fr);
+    row-gap: 40px;
+    column-gap: 35px;
     list-style: none;
     align-items: center;
-    /* background-color: lightcoral; */
+    padding-inline-start: 0px;
 }
 
 .reasons_right li{
     font-size: 16px;
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-#res1{width: 228px;padding:0px 0px 17px 0px}
-#res2{padding:17px 0px 17px 0px}
-#res3{padding:16px 0px 16px 0px}
-#res4{padding:17px 0px 17px 0px}
-#res5{padding:8px 0px 8px 0px}
-#res6{padding:16px 0px 16px 0px}
+/* offers */
 
-#sad1{
-    position: absolute;
-    left: 545px; top: 882px;
+.offers_left{
+    margin-top: 80px;
+    margin-bottom: 526px;
+    padding-left: 165px;
 }
 
-#sad2{
-    position: absolute;
-    left: 545px; top: 992px;
+.offers_left h2{
+    width: 287px;
+    height: 30px;
 }
-#sad3{
-    position: absolute;
-    left: 545px; top: 1102px;
+
+.offers_right ul{
+    display: grid;
+    margin: 199px 206px 120px 83px;
+    grid-template-columns: repeat(2, 4fr);
+    row-gap: 40px;
+    column-gap: 35px;
+    list-style: none;
+    align-items: center;
+    padding-inline-start: 0px;
 }
-#sad4{
-    position: absolute;
-    left: 925px; top: 882px;
+
+.offers_right li{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
-#sad5{
-    position: absolute;
-    left: 925px; top: 992px;
+
+/* services */
+#services{
+    flex-direction: column;
 }
-#sad6{
-    position: absolute;
-    left: 925px; top: 1102px;
+
+.services_top h2{
+    width: 115px;
+    height: 30px;
+    padding: 0px 0px 30px 165px;
 }
+
+.services_bottom ul{
+    display: grid;
+    margin: 30px 165px 81px 165px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 35px;
+    list-style: none;
+    align-items: center;
+    padding-inline-start: 0px;
+}
+
+.services_bottom li{
+    width: 350px;
+    padding: 30px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+}
+
+.services_bottom h3{margin-bottom: 23px;}
+
+.services_bottom img{height: 16px;width: 16px;}
+
+#bold_p{font-weight: 700; margin-top: 29px;}
+
+#learn_more{display: flex;}
+
+#learn_more img{margin-top: 29px; margin-left: 7px;}
