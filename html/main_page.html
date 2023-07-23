@@ -23,7 +23,7 @@
             </a>
             <li><a href="services.html">Послуги</a></li>
             <li><a href="#link_about_us">Про нас</a></li>
-            <li><a href="../html/cases.html">Кейси</a></li>
+            <li><a href="#cases_top">Кейси</a></li>
             <li><a href="#reviews_top">Відгуки</a></li>
             <li><a href="blog.html">Блог</a></li>
             <li><a href="contacts.html">Контакти</a></li>
@@ -43,7 +43,7 @@
             <form class="form" id="order_form">
               <h2>Замовити демо</h2>
               <div class="form_element">
-                <input type="text" placeholder="Ім'я *" id="name_form" />
+                <input type="text" placeholder="Ім'я *" id="name_form"/>
                 <div class="error" id="e-name">
                   <p>Дотримуйтесь вказаного формату</p>
                 </div>
@@ -63,7 +63,7 @@
                 <input type="text" placeholder="Назва компанії" />
               </div>
               <div class="form_element">
-                <input type="text" placeholder="E-mail *" id="email" />
+                <input type="text" placeholder="E-mail *" id="email" pattern="[A-Za-z]\.\-[0-9]*[@][a-zA-Z]*[\.][a-z]{2,}"/>
                 <div class="error" id="e-email">
                   <p>Дотримуйтесь вказаного формату</p>
                 </div>
@@ -74,7 +74,7 @@
                 ></textarea>
               </div>
               <div class="form_element" id="form_bottom">
-                <button id="order_btn">Замовити</button>
+                <button id="order_btn" type="button">Замовити</button>
                 <div class="add_file">
                   <img src="../images/plus.svg" width="10px" />
                   <h4>Додати файл</h4>
@@ -664,6 +664,9 @@
       </div>
     </section>
 
-    <script src="../js/script.js"></script>
+    <script src="../js/form.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/expand.js"></script>
+    <script src="../js/btn_color.js"></script>
   </body>
 </html>
