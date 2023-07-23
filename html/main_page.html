@@ -5,36 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDoIt</title>
     <link rel="stylesheet" href="../css/mainPage.css" />
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/96681e814c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- NAVIGATION BAR  -->
-<section>
-  <nav>
-      <div class="nav_bar">
-        <ul class="nav_bar_list">
-          <a href="index.html" id="svg_logo">
-            <img src="../images/logo.svg" id="logo" />
-          </a>
-          <li><a href="services.html">Послуги</a></li>
-          <li><a href="about_us.html">Про нас</a></li>
-          <li><a href="cases.html">Кейси</a></li>
-          <li><a href="reviews.html">Відгуки</a></li>
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="contacts.html">Контакти</a></li>
-        </ul>
-        <div>
-          <button type="button">Замовити демо</button>
+    <section>
+      <nav>
+        <div class="nav_bar">
+          <ul class="nav_bar_list">
+            <a href="../html/main_page.html" id="svg_logo">
+              <img src="../images/logo.svg" id="logo" />
+            </a>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="#link_about_us">Про нас</a></li>
+            <li><a href="../html/cases.html">Кейси</a></li>
+            <li><a href="#reviews_top">Відгуки</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+
+          <div>
+            <button type="button" id="openButton">Замовити демо</button>
+          </div>
+          <div><p>Ua</p></div>
+          <img src="../images/arrow_down.svg" id="arrow_down" />
+
+          <div class="popup-overlay" id="overlay"></div>
+          <div class="popup1" id="popup1">
+            <div class="close_btn">
+              <img src="../images/Close.svg" id="close_btn" width 16px />
+            </div>
+            <form class="form" id="order_form">
+              <h2>Замовити демо</h2>
+              <div class="form_element">
+                <input type="text" placeholder="Ім'я *" id="name_form" />
+                <div class="error" id="e-name">
+                  <p>Дотримуйтесь вказаного формату</p>
+                </div>
+              </div>
+              <div class="form_element" id="num_special">
+                <div class="num_special">
+                  <p>+380</p>
+                  <img src="../images/ukraine.svg" />
+                  <img src="../images/arrow_down.svg" />
+                </div>
+                <input type="text" id="phone" placeholder="(00) 000-00-00" />
+                <div class="error" id="e-phone">
+                  <p>Дотримуйтесь вказаного формату</p>
+                </div>
+              </div>
+              <div class="form_element">
+                <input type="text" placeholder="Назва компанії" />
+              </div>
+              <div class="form_element">
+                <input type="text" placeholder="E-mail *" id="email" />
+                <div class="error" id="e-email">
+                  <p>Дотримуйтесь вказаного формату</p>
+                </div>
+              </div>
+              <div class="form_element">
+                <textarea
+                  placeholder="Опишіть задачу, яку потрібно виконати"
+                ></textarea>
+              </div>
+              <div class="form_element" id="form_bottom">
+                <button id="order_btn">Замовити</button>
+                <div class="add_file">
+                  <img src="../images/plus.svg" width="10px" />
+                  <h4>Додати файл</h4>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="popup2" id="popup2">
+            <div class="close_btn" id="close_btn">
+              <img src="../images/Close.svg" width 16px />
+            </div>
+            <img src="../images/success.svg" />
+            <h2>Супер!<br />Ваш запит відправлено</h2>
+            <p>
+              Найближчим часом наш менеджер зв’яжеться з вами та проконсультує
+              по умовам отримання демо
+            </p>
+            <button id="ok">OK</button>
+          </div>
         </div>
-        <div><p>Ua</p></div>
-        <img src="../images/arrow_down.svg" id="arrow_down" />
-      </div>
-    </nav>
-  </section>
-    
+      </nav>
+    </section>
+
     <!-- visiting card -->
 
-    <section>
+    <section id="visit_card">
       <div class="visit_card_left">
         <h1>Автоматизуємо бізнес-процеси за допомогою CRM-систем</h1>
         <p>
@@ -54,115 +121,549 @@
     </section>
 
     <!-- REASONS-->
+    <div class="wrapper">
+      <section id="reasons">
+        <div class="reasons_left">
+          <h2>Вашій компанії потрібна автоматизація якщо?</h2>
+        </div>
+        <div class="reasons_right">
+          <ul>
+            <li>
+              <img src="../images/sad_rect.svg" />
+              <p>Не віслідковуєте діяльність та ефективність співробітників</p>
+            </li>
+            <li>
+              <img src="../images/sad_rect.svg" />
+              <p>Немає воронки продажу ,або вона не автоматизована</p>
+            </li>
+            <li>
+              <img src="../images/sad_rect.svg" />
+              <p>Маєте багато IT-систем ,які між собою не інтегровані</p>
+            </li>
+            <li>
+              <img src="../images/sad_rect.svg" />
+              <p>Втрачаєте клієнтів через не автоматизований облік</p>
+            </li>
+            <li>
+              <img src="../images/sad_rect.svg" />
+              <p>
+                Не автоматизовані процеси з продажів, маркетингу та
+                обслуговування
+              </p>
+            </li>
+            <li>
+              <img src="../images/sad_rect.svg" />
+              <p>Ваша компанія працює на російських CRM-системах</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
 
-    <section>
-      <div class="reasons_left">
-        <h2>Вашій компанії потрібна автоматизація якщо?</h2>
-      </div>
-      <div class="reasons_right">
-        <ul>
-          <li>
-            <img src="../images/sad_rect.svg">
-            <p>Не віслідковуєте діяльність та ефективність співробітників</p>
-          </li>
-          <li>
-            <img src="../images/sad_rect.svg">
-            <p>Немає воронки продажу ,або вона не автоматизована</p>
-          </li>
-          <li>
-            <img src="../images/sad_rect.svg">
-            <p>Маєте багато IT-систем ,які між собою не інтегровані</p>
-          </li>
-          <li>
-            <img src="../images/sad_rect.svg">
-            <p>Втрачаєте клієнтів через не автоматизований облік </p>
-          </li>
-          <li>
-            <img src="../images/sad_rect.svg">
-            <p>Не автоматизовані процеси з продажів, маркетингу та обслуговування</p>
-          </li>
-          <li>
-            <img src="../images/sad_rect.svg">
-            <p>Ваша компанія працює на російських CRM-системах</p>
-          </li>
-        </ul>                      
-      </div>
-    </section>
+    <!-- OFFERS -->
 
-     <!-- OFFERS -->
-
-     <section>
+    <section id="offers">
       <div class="offers_left">
         <h2>Що ми пропонуємо?</h2>
       </div>
       <div class="offers_right">
         <ul>
           <li>
-            <img src="../images/Rectangle 13.svg">
-            <p>Всі співробітники та постановка задач для них в єдиній системі, синхронізовані календарі.</p>
+            <img src="../images/Rectangle 13.svg" />
+            <p>
+              Всі співробітники та постановка задач для них в єдиній системі,
+              синхронізовані календарі.
+            </p>
           </li>
           <li>
-            <img src="../images/Rectangle 13.svg">
+            <img src="../images/Rectangle 13.svg" />
             <p>Автоматизовані нагадування, про дедлайни та події</p>
           </li>
           <li>
-            <img src="../images/Rectangle 13.svg">
-            <p>Швидка інтеграція з обліковими системами, документообігом та іншими системами компанії</p>
+            <img src="../images/Rectangle 13.svg" />
+            <p>
+              Швидка інтеграція з обліковими системами, документообігом та
+              іншими системами компанії
+            </p>
           </li>
           <li>
-            <img src="../images/Rectangle 13.svg">
-            <p>Автоматизація та оптимізація процесів продажу, маркетингу, обслуговування.</p>
+            <img src="../images/Rectangle 13.svg" />
+            <p>
+              Автоматизація та оптимізація процесів продажу, маркетингу,
+              обслуговування.
+            </p>
           </li>
           <li>
-            <img src="../images/Rectangle 13.svg">
-            <p>Підтримка єдиних процесів продажу для всіх потенційних клієнтів та підрозділів компанії.</p>
+            <img src="../images/Rectangle 13.svg" />
+            <p>
+              Підтримка єдиних процесів продажу для всіх потенційних клієнтів та
+              підрозділів компанії.
+            </p>
           </li>
           <li>
-            <img src="../images/Rectangle 13.svg">
+            <img src="../images/Rectangle 13.svg" />
             <p>Побудована корпоративна воронка продажів</p>
           </li>
           <li>
-            <img src="../images/Rectangle 13.svg">
+            <img src="../images/Rectangle 13.svg" />
             <p>Інтеграція з усіма популярними месенджерами та телефонією</p>
           </li>
           <li>
-            <img src="../images/Rectangle 13.svg">
-            <p>Підтримка єдиних процесів продажу для всіх потенційних клієнтів та підрозділів компанії.</p>
+            <img src="../images/Rectangle 13.svg" />
+            <p>
+              Підтримка єдиних процесів продажу для всіх потенційних клієнтів та
+              підрозділів компанії.
+            </p>
           </li>
-        </ul>                      
+        </ul>
       </div>
     </section>
 
-<!-- SERVICES -->
+    <!-- SERVICES -->
 
-<section id="services">
-  <div class="services_top"><h2>Послуги</h2></div>
-  <div class="services_bottom">
-    <ul>
-      <li>
-        <h3>Підбір рішень для автоматизації продажів</h3>
-        <p>Нічого зайвого чи випадкового. Тільки те, що дійсно працює. Наша глибока експертиза і багаторічний досвід дозволяють гарантувати ефективність
-           рішень, які ми пропонуємо.</p>
-           <div id="learn_more"><p id="bold_p">Дізнатися більше</p>
-           <img src="../images/plus.svg"></div>
-      </li>
-      <li>
-        <h3>Впровадження рішень «під ключ»</h3>
-        <p>Налаштування системи і всіх необхідних інтеграцій з вашою ІТ-інфраструктурою. Ми не лише впроваджуємо рішення,
-          а й розвиваємо систему, виходячи з потреб і викликів вашого бізнесу.</p>
-          <div id="learn_more"><p id="bold_p">Дізнатися більше</p>
-            <img src="../images/plus.svg"></div>
-      </li>
-      <li>
-        <h3>Контроль інших інтеграторів</h3>
-        <p>Навіть якщо ви оберете інших спеціалістів з цифровізації, ми залишаємося корисними. 
-          Ми проводимо незалежний аудит пропозиції інтегратора та убезпечуємо вас від надмірних витрат та зайвих рішень.</p>
-          <div id="learn_more"><p id="bold_p">Дізнатися більше</p>
-            <img src="../images/plus.svg"></div>
-      </li>
-    </ul>                      
-  </div>
-</section>
+    <section>
+      <div class="services_top"><h2>Послуги</h2></div>
+      <div class="services_bottom">
+        <ul>
+          <li>
+            <h3>
+              Підбір рішень для <br />
+              автоматизації продажів
+            </h3>
+            <p>
+              Нічого зайвого чи випадкового. Тільки те, що дійсно працює. Наша
+              глибока експертиза і багаторічний досвід дозволяють гарантувати
+              ефективність рішень, які ми пропонуємо.
+            </p>
+            <div id="learn_more">
+              <p id="bold_p">Дізнатися більше</p>
+              <img src="../images/plus.svg" />
+            </div>
+          </li>
+          <li>
+            <h3>
+              Впровадження рішень <br />
+              «під ключ»
+            </h3>
+            <p>
+              Налаштування системи і всіх необхідних інтеграцій з вашою
+              ІТ-інфраструктурою. Ми не лише впроваджуємо рішення, а й
+              розвиваємо систему, виходячи з потреб і викликів вашого бізнесу.
+            </p>
+            <div id="learn_more">
+              <p id="bold_p">Дізнатися більше</p>
+              <img src="../images/plus.svg" />
+            </div>
+          </li>
+          <li>
+            <h3>
+              Контроль інших <br />
+              інтеграторів
+            </h3>
+            <p>
+              Навіть якщо ви оберете інших спеціалістів з цифровізації, ми
+              залишаємося корисними. Ми проводимо незалежний аудит пропозиції
+              інтегратора та убезпечуємо вас від надмірних витрат та зайвих
+              рішень.
+            </p>
+            <div id="learn_more">
+              <p id="bold_p">Дізнатися більше</p>
+              <img src="../images/plus.svg" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <!-- QUESTIONS? -->
+
+    <div class="wrapper">
+      <section id="questions">
+        <div class="questions_text">
+          <h2>Виникли запитання?</h2>
+          <p>
+            Наші спеціалісти проконсультують <br />
+            вас по всім питаннями
+          </p>
+        </div>
+        <div class="questions_btn">
+          <button type="button">Залишити заявку</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ABOUT US -->
+
+    <section>
+      <div class="about_us_top"><h2 id="link_about_us">Про нас</h2></div>
+
+      <div class="about_us_center">
+        <img src="../images/big_circle.svg" id="circle" />
+        <div class="txt1">
+          <h1>10+ CRM</h1>
+          <p>
+            Досконально знаємо <br />
+            та маємо велику експертизу у приміненні
+          </p>
+        </div>
+        <div class="txt2">
+          <h1>100+ проектів</h1>
+          <p>Успішно реалізували <br />для різних галузей</p>
+        </div>
+        <div class="txt3">
+          <h1>5+ країн</h1>
+          <p>
+            Налічує географія <br />
+            наших клієнтів
+          </p>
+        </div>
+        <div class="txt4">
+          <h1>17+ років</h1>
+          <p>
+            Впроваджуємо CRM та розвиваємо<br />
+            бізнеси наших клієнтів
+          </p>
+        </div>
+        <div class="central">
+          <img src="../images/logo.svg" id="logo2" />
+          <h3>це:</h3>
+        </div>
+      </div>
+
+      <div class="about_us_bottom">
+        <ul>
+          <li>
+            <img src="../images/yellow_rect.svg" />
+            <p>
+              Глибоке знання на базі бізнес-рішень Майкрософт та рішень які
+              доповнюють CRM від Майкрософт.
+            </p>
+          </li>
+          <li>
+            <img src="../images/yellow_rect.svg" />
+            <p>
+              Маємо експертизу у великій кількості галузей. <br />
+              AI-Sales. Big-data
+            </p>
+          </li>
+          <li>
+            <img src="../images/yellow_rect.svg" />
+            <p>
+              Використовуємо <br />CRM-системи <br />
+              від світових Вендорів.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section>
+      <div id="principles_top"><h2>Принципи роботи</h2></div>
+      <div class="principles_bottom">
+        <ul>
+          <li>
+            <p>
+              Low-code <br />
+              (доопрацювання без програмування)
+            </p>
+          </li>
+          <li><p>Мультивалютна та мультимовна системи.</p></li>
+          <li>
+            <p>Покращена звітність та точніше прогнозування стану бізнесу.</p>
+          </li>
+          <li>
+            <p>
+              За рахунок нагляду над впровадженням CRM економія коштів на 10-30%
+            </p>
+          </li>
+          <li>
+            <p>
+              Багато готових конекторів між системами, що економить кошти на
+              розробку та час співробітників.
+            </p>
+          </li>
+          <li>
+            <p>
+              Швидка розробка, гнучке ціноутворення у ліцензуванні та у
+              впровадженні.
+            </p>
+          </li>
+          <li><p>Даємо демо від 2 тижнів до місяців</p></li>
+          <li>
+            <p>Впровадження систем по гнучким метологіям (Agile, Scrum),</p>
+          </li>
+          <li>
+            <p>Індивідуальний та клієнтоорієнтовний підхід до клієнтів</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TECH -->
+
+    <div class="wrapper">
+      <section>
+        <div id="tech_top"><h2>Технології ,які ми використовуємо</h2></div>
+        <div class="tech_bottom">
+          <ul>
+            <li>
+              <img src="../images/lil_blue_circle.svg" />
+              <h3>Microsoft Dynamics 365</h3>
+            </li>
+            <li>
+              <img src="../images/lil_blue_circle.svg" />
+              <h3>Microsoft Power Platform</h3>
+            </li>
+            <li>
+              <img src="../images/lil_blue_circle.svg" />
+              <h3>Microsoft Office</h3>
+            </li>
+            <li>
+              <img src="../images/lil_blue_circle.svg" />
+              <h3>Телефонія</h3>
+            </li>
+            <li>
+              <img src="../images/lil_blue_circle.svg" />
+              <h3>Навчання співробітників <br />з CRM</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- CASES -->
+
+    <section>
+      <div id="cases_top">
+        <h2>Кейси</h2>
+      </div>
+      <div class="cases_main">
+        <ul>
+          <li><button class="button" onclick="changeColor(0)">Всі</button></li>
+          <li>
+            <button class="button" onclick="changeColor(1)">Автомотів</button>
+          </li>
+          <li><button class="button" onclick="changeColor(2)">IT</button></li>
+          <li>
+            <button class="button" onclick="changeColor(3)">Банки</button>
+          </li>
+          <li>
+            <button class="button" onclick="changeColor(4)">Рітейл</button>
+          </li>
+          <li>
+            <button class="button" onclick="changeColor(5)">E-commerce</button>
+          </li>
+          <li>
+            <button class="button" onclick="changeColor(6)">Логістика</button>
+          </li>
+          <li>
+            <button class="button" onclick="changeColor(7)">
+              Страхові компанії
+            </button>
+          </li>
+          <li>
+            <button class="button" onclick="changeColor(8)">Інфобіз</button>
+          </li>
+          <li>
+            <button class="button" onclick="changeColor(9)">
+              Нафто-газові компанії
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cases_bottom">
+        <ul>
+          <li>
+            <img src="../images/fat_rect.svg" />
+            <h3>Назва кейсу</h3>
+          </li>
+          <li>
+            <img src="../images/fat_rect.svg" />
+            <h3>Назва кейсу</h3>
+          </li>
+          <li>
+            <img src="../images/fat_rect.svg" />
+            <h3>Назва кейсу</h3>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cases_add">
+        <ul class="cases_ul">
+          <li>
+            <img src="../images/fat_rect.svg" />
+            <h3>Назва кейсу</h3>
+          </li>
+          <li>
+            <img src="../images/fat_rect.svg" />
+            <h3>Назва кейсу</h3>
+          </li>
+          <li>
+            <img src="../images/fat_rect.svg" />
+            <h3>Назва кейсу</h3>
+          </li>
+        </ul>
+      </div>
+      <div><button onclick="expand()" id="look_more">Дивитись ще</button></div>
+    </section>
+
+    <!-- REVIEWS -->
+
+    <section>
+      <div id="reviews_top">
+        <h2>Клієнти про нас</h2>
+      </div>
+      <div class="reviews_main">
+        <ul>
+          <li class="neighbour">
+            <img src="../images/lil_sad_circle.svg" />
+            <h3>Аркадій Добкін</h3>
+            <p>CEO "EPAM"</p>
+            <a href="/facebook.com">Contacts</a>
+            <p>
+              Lorem ipsum — це псевдолатинський текст, який використовується у
+              веб-дизайні, типографіці, макеті.
+            </p>
+          </li>
+          <li id="main">
+            <img src="../images/lil_sad_circle.svg" />
+            <h3>Саміт Суд</h3>
+            <p>COO "GlobalLogic"</p>
+            <a href="/facebook.com">Contacts</a>
+            <p>
+              Lorem ipsum — це псевдолатинський текст, який використовується у
+              веб-дизайні, типографіці, макеті та поліграфії замість англійської
+              мови, щоб підкреслити елементи дизайну над вмістом. Його також
+              називають текстом-заповнювачем (або текстом-заповнювачем). Це
+              зручний інструмент для макетів. Це допомагає окреслити візуальні
+              елементи документа чи презентації, наприклад типографіку, шрифт
+              або макет...
+            </p>
+          </li>
+          <li class="neighbour">
+            <img src="../images/lil_sad_circle.svg" />
+            <h3>Євген Засоба</h3>
+            <p>CEO "Somatic"</p>
+            <a href="/facebook.com">Contacts</a>
+            <p>
+              Lorem ipsum — це псевдолатинський текст, який використовується у
+              веб-дизайні, типографіці, макеті.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+
+    <section>
+      <div id="team_top">
+        <h2 id="team_h2">Команда</h2>
+        <img class="prev-btn" src="../images/left_arrow.svg" />
+        <img class="next-btn" src="../images/right_arrow.svg" />
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-item">
+            <img src="../images/chonky_rect.svg" />
+            <h3>Костянтин Поповенко</h3>
+            <p>CEO</p>
+            <img src="../images/plus.svg" id="plus" />
+          </div>
+          <div class="carousel-item">
+            <img src="../images/chonky_rect.svg" />
+            <h3>Ольга Рубан</h3>
+            <p>Account manager</p>
+            <img src="../images/plus.svg" id="plus" />
+          </div>
+          <div class="carousel-item">
+            <img src="../images/chonky_rect.svg" />
+            <h3>Дмитро Ковальчук</h3>
+            <p>Project manager</p>
+            <img src="../images/plus.svg" id="plus" />
+          </div>
+          <div class="carousel-item">
+            <img src="../images/chonky_rect.svg" />
+            <h3>Ангеліна Корнєва</h3>
+            <p>Developer</p>
+            <img src="../images/plus.svg" id="plus" />
+          </div>
+          <div class="carousel-item">
+            <img src="../images/chonky_rect.svg" />
+            <h3>Олег Панько</h3>
+            <p>Developer</p>
+            <img src="../images/plus.svg" id="plus" />
+          </div>
+          <div class="carousel-item">
+            <img src="../images/chonky_rect.svg" />
+            <h3>Петро Пукач</h3>
+            <p>Teamlead</p>
+            <img src="../images/plus.svg" id="plus" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETS TALK-->
+    <div class="wrapper">
+      <section>
+        <div class="lets_talk">
+          <h2>Давайте обговоримо ваш проект?</h2>
+          <div class="LT_phone">
+            <p>+38 (093) 777-00-44</p>
+            <p>+38 (050) 777-00-44</p>
+          </div>
+
+          <p>hello@todoit.com</p>
+          <button type="button" id="talk_btn">Залишити заявку</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER-->
+
+    <section id="footer">
+      <div class="f1">
+        <img src="../images/logo.svg" id="f_logo" />
+        <div class="f1_bottom">
+          <div class="f1_facebook">
+            <img src="../images/less_sad_circle.svg" id="f1_circle" />
+            <div class="fb_icon"><img src="../images/facebook.svg" /></div>
+          </div>
+          <div class="f1_insta">
+            <img src="../images/less_sad_circle.svg" id="f1_circle" />
+            <div class="insta_icon"><img src="../images/instagram.svg" /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f2">
+        <h3>Послуги</h3>
+        <p>Підбір рішень для автоматизації продажів</p>
+        <p>Впровадження рішень «під ключ»</p>
+        <p>Контроль інших інтеграторів</p>
+      </div>
+
+      <div class="f3">
+        <a href="../html/cases.html">Кейси</a>
+        <a href="#reviews_top">Відгуки</a>
+        <a href="#link_about_us">Про нас</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+    </section>
+
+    <section>
+      <img src="../images/long_line.svg" id="line" />
+      <div id="end">
+        <p>© ToDoIt Всі права захищені</p>
+        <p>Політика конфіденційності</p>
+      </div>
+    </section>
+
+    <script src="../js/script.js"></script>
   </body>
 </html>
