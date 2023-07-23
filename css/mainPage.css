@@ -19,7 +19,7 @@ h4,
 p,
 button,
 a,
-textarea {
+textarea,div {
   font-family: Gilroy;
   color: var(--black, #141414);
 }
@@ -161,9 +161,23 @@ button {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   display: none;
   z-index: 2;
+  text-align: center;
 }
 
+.popup2 img{
+  margin: 0px 175px;
+}
 
+.popup2 p{
+  margin: 10px 32px 0px 33px;
+}
+
+.popup2 button{
+  width: 84px;
+  margin: 26px 163px 40px;
+  color: white;
+  background-color: #141414;
+}
 
 .close_btn img {
   cursor: pointer;
@@ -209,6 +223,7 @@ button {
   top: 46px;
   right: 16px;
   color: red;
+  
 }
 
 
