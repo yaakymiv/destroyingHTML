@@ -218,14 +218,16 @@ button {
 }
 
 .error{
-  display: none;
   position: absolute;
   top: 46px;
-  right: 16px;
+  right: 0px;
   color: red;
-  
+  font-size: 13px;
 }
 
+#order_btn.button-success {
+  background-color: black; 
+}
 
 .form_element textarea {
   width: 330px;
