@@ -1,10 +1,29 @@
 //validation
 const openButton = document.getElementById("openButton");
+const openTalk = document.getElementById("talk_btn");
+const openConsults = document.getElementsByClassName("consult_btn");
 const popup1 = document.getElementById("popup1");
+const targetElement = document.getElementById('targetElement');
+
+
+for (let i = 0; i < openConsults.length; i++) {
+  openConsults[i].addEventListener("click", () => {
+      popup1.style.display = "block";
+      overlay.style.display = "block";
+      targetElement.textContent = 'Замовити консультацію';
+  });
+}
+
+openTalk.addEventListener("click", () => {
+  popup1.style.display = "block";
+  overlay.style.display = "block";
+  targetElement.textContent = 'Замовити демо';
+});
 
 openButton.addEventListener("click", () => {
   popup1.style.display = "block";
   overlay.style.display = "block";
+  targetElement.textContent = 'Замовити демо';
 });
 
 const closeButton1 = document.getElementById("close_btn1");

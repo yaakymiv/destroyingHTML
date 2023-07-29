@@ -1,0 +1,114 @@
+/* LETS TALK */
+
+.lets_talk {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 80px 474px;
+    background-color: #f4f4f4;
+    text-align: center;
+    align-items: center;
+  }
+  .LT_phone {
+    display: flex;
+    gap: 20px;
+  }
+  #talk_btn {
+    margin-top: 25px;
+    width: 191px;
+    height: 50px;
+    color: white;
+    background: var(--black, #141414);
+  }
+
+  #talk_btn:hover{
+    background-color: lightgray;
+    transition: 0.5s;
+    border-color: #f4f4f4;
+    color: black;
+  }
+  
+  #talk_btn_o {
+    height: 50px;
+  }
+  
+  #talk_btn_o.button-success {
+    background-color: black;
+    transition: 0.5s;
+  }
+  
+  #ok_t{
+    width: 82px;
+    height: 50px;
+  }
+  
+  /* FOOTER */
+  
+  #footer {
+    display: flex;
+  }
+  
+  .f1 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 50px 521px 65px 165px;
+  }
+  
+  .f1_bottom {
+    display: flex;
+    position: relative;
+    gap: 10px;
+  }
+  
+  .fb_icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .insta_icon {
+    position: absolute;
+    top: 10px;
+    left: 54px;
+  }
+  
+  #f_logo {
+    width: 140px;
+  }
+  #f1_circle {
+    width: 34px;
+  }
+  
+  .f2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 70px 66px 61px 0px;
+  }
+  
+   .f2 a{
+    font-size: 14px;
+    text-decoration: none;
+   }
+
+  .f3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 70px 0px 35px 0px;
+  }
+  
+  .f3 a {
+    text-decoration: none;
+  }
+  
+  #line {
+    margin: 0px 165px 20px;
+  }
+  
+  #end {
+    display: flex;
+    margin: 0px 165px 20px;
+    gap: 714px;
+  }

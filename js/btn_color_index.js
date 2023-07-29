@@ -11,3 +11,9 @@ function changeColor(index) {
 
   currentActiveButton = buttons[index];
 }
+
+const defaultActiveButtonIndex = 0;
+
+window.addEventListener("load", () => {
+  changeColor(defaultActiveButtonIndex);
+});

@@ -5,34 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/nav_bar.css" />
+    <script
+    src="https://kit.fontawesome.com/96681e814c.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
 <body>
      <!-- NAVIGATION BAR  -->
      <section>
-        <nav>
-          <div class="nav_bar">
-            <ul class="nav_bar_list">
-                <a href="../index.html" id="svg_logo">
-                    <img src="../images/logo.svg" id="logo" />
-                  </a>
-                  <li><a href="services.html">Послуги</a></li>
-                  <li><a href="../index.html#link_about_us">Про нас</a></li>
-                  <li><a href="../index.html#cases_top">Кейси</a></li>
-                  <li><a href="../index.html#reviews_top">Відгуки</a></li>
-                  <li><a href="blog.html">Блог</a></li>
-                  <li><a href="contacts.html">Контакти</a></li>
-            </ul>
+      <nav>
+        <div class="nav_bar">
+          <ul class="nav_bar_list">
+            <a href="../index.html" id="svg_logo">
+              <img src="../images/icons/logo.svg" id="logo" />
+            </a>
+            <li><div class="dropdown">
+              <span class="dropbtn">Послуги 
+                <img src="../images/icons/arrow_down.svg" id="down">
+                <img src="../images/icons/arrow_up.svg" id="up">
+              </span>
+              <div class="dropdown-content">
+                <a href="../html/auto_dec.html">Підбір рішень для автоматизації продажів</a>
+                <a href="javascript:;">Впровадження рішень «під ключ»</a>
+                <a href="javascript:;">Контроль інших інтеграторів</a>
+              </div>
+            </div></li>
+            <li><a href="../index.html#link_about_us">Про нас</a></li>
+            <li><a href="../index.html#cases_top">Кейси</a></li>
+            <li><a href="../index.html#reviews_top">Відгуки</a></li>
+            <li><a href="../html/blog.html">Блог</a></li>
+            <li><a href="../html/contacts.html">Контакти</a></li>
+          </ul>
   
             <div>
               <button type="button" id="openButton">Замовити демо</button>
             </div>
             <div><p>Ua</p></div>
-            <img src="../images/arrow_down.svg" id="arrow_down" />
+            <img src="../images/icons/arrow_down.svg" id="arrow_down" />
   
             <div class="popup-overlay" id="overlay"></div>
             <div class="popup1" id="popup1">
               <div class="close_btn">
-                <img src="../images/Close.svg" id="close_btn1" width 16px />
+                <img src="../images/icons/Close.svg" id="close_btn1" width 16px />
               </div>
               <form class="form" id="order_form">
                 <h2>Замовити демо</h2>
@@ -48,8 +65,8 @@
                 <div class="form_element" id="num_special">
                   <div class="num_special">
                     <p>+380</p>
-                    <img src="../images/ukraine.svg" />
-                    <img src="../images/arrow_down.svg" />
+                    <img src="../images/icons/ukraine.svg" />
+                    <img src="../images/icons/arrow_down.svg" />
                   </div>
                   <input
                     type="text"
@@ -79,7 +96,7 @@
                 <div class="form_element" id="form_bottom">
                   <button id="order_btn" type="button">Замовити</button>
                   <div class="add_file">
-                    <img src="../images/plus.svg" width="10px" />
+                    <img src="../images/icons/plus.svg" width="10px" />
                     <h4>Додати файл</h4>
                   </div>
                 </div>
@@ -88,9 +105,9 @@
   
             <div class="popup2" id="popup2">
               <div class="close_btn">
-                <img src="../images/Close.svg" width 16px id="close_btn2" />
+                <img src="../images/icons/Close.svg" width 16px id="close_btn2" />
               </div>
-              <img src="../images/success.svg" />
+              <img src="../images/icons/success.svg" />
               <h2>Супер!<br />Ваш запит відправлено</h2>
               <p>
                 Найближчим часом наш менеджер зв’яжеться з вами та проконсультує
@@ -123,7 +140,7 @@
                 <ul>
                   <li>
                     <div class="blog_element">
-                        <img src="../images/big_gray_rect.svg" />
+                        <img src="../images/style_objects/blog_rect.svg" />
                         <div class="blog_e_child"> 
                             <p class="blog_date">20.06.2021</p>
                             <h3>Назва статті</h3>
@@ -133,7 +150,7 @@
                   </li>
                   <li>
                     <div class="blog_element">
-                        <img src="../images/big_gray_rect.svg" />
+                        <img src="../images/style_objects/blog_rect.svg" />
                         <div class="blog_e_child"> 
                             <p class="blog_date">20.06.2021</p>
                             <h3>Назва статті</h3>
@@ -143,7 +160,7 @@
                   </li>
                   <li>
                     <div class="blog_element">
-                        <img src="../images/big_gray_rect.svg" />
+                        <img src="../images/style_objects/blog_rect.svg" />
                         <div class="blog_e_child"> 
                             <p class="blog_date">20.06.2021</p>
                             <h3>Назва статті</h3>
@@ -167,7 +184,7 @@
                   </li>
                   <li>
                     <div class="blog_element">
-                        <img src="../images/big_gray_rect.svg" />
+                        <img src="../images/style_objects/blog_rect.svg" />
                         <div class="blog_e_child"> 
                             <p class="blog_date">20.06.2021</p>
                             <h3>Назва статті</h3>
@@ -177,7 +194,7 @@
                   </li>
                   <li>
                     <div class="blog_element">
-                        <img src="../images/big_gray_rect.svg" />
+                        <img src="../images/style_objects/blog_rect.svg" />
                         <div class="blog_e_child"> 
                             <p class="blog_date">20.06.2021</p>
                             <h3>Назва статті</h3>
@@ -192,7 +209,7 @@
                 <ul class="blog_ul">
                     <li>
                         <div class="blog_element">
-                            <img src="../images/big_gray_rect.svg" />
+                            <img src="../images/style_objects/blog_rect.svg" />
                             <div class="blog_e_child"> 
                                 <p class="blog_date">20.06.2021</p>
                                 <h3>Назва статті</h3>
@@ -202,7 +219,7 @@
                       </li>
                       <li>
                         <div class="blog_element">
-                            <img src="../images/big_gray_rect.svg" />
+                            <img src="../images/style_objects/blog_rect.svg" />
                             <div class="blog_e_child"> 
                                 <p class="blog_date">20.06.2021</p>
                                 <h3>Назва статті</h3>
@@ -212,7 +229,7 @@
                       </li>
                       <li>
                         <div class="blog_element">
-                            <img src="../images/big_gray_rect.svg" />
+                            <img src="../images/style_objects/blog_rect.svg" />
                             <div class="blog_e_child"> 
                                 <p class="blog_date">20.06.2021</p>
                                 <h3>Назва статті</h3>
@@ -222,7 +239,7 @@
                       </li>
                       <li>
                         <div class="blog_element">
-                            <img src="../images/big_gray_rect.svg" />
+                            <img src="../images/style_objects/blog_rect.svg" />
                             <div class="blog_e_child"> 
                                 <p class="blog_date">20.06.2021</p>
                                 <h3>Назва статті</h3>
@@ -238,6 +255,7 @@
       </section>
 
        <!-- LETS TALK-->
+       
     <div class="wrapper">
         <section>
           <div class="lets_talk">
@@ -252,7 +270,7 @@
             <div class="popup-overlay" id="overlay_talk"></div>
             <div class="popup1" id="popup1_t">
               <div class="close_btn">
-                <img src="../images/Close.svg" id="close_btn1_t" width 16px />
+                <img src="../images/icons/Close.svg" id="close_btn1_t" width 16px />
               </div>
               <form class="form" id="talk_form">
                 <h2>Замовити демо</h2>
@@ -268,8 +286,8 @@
                 <div class="form_element" id="num_special">
                   <div class="num_special">
                     <p>+380</p>
-                    <img src="../images/ukraine.svg" />
-                    <img src="../images/arrow_down.svg" />
+                    <img src="../images/icons/ukraine.svg" />
+                    <img src="../images/icons/arrow_down.svg" />
                   </div>
                   <input
                     type="text"
@@ -299,7 +317,7 @@
                 <div class="form_element" id="form_bottom">
                   <button id="talk_btn_o" type="button">Замовити</button>
                   <div class="add_file">
-                    <img src="../images/plus.svg" width="10px" />
+                    <img src="../images/icons/plus.svg" width="10px" />
                     <h4>Додати файл</h4>
                   </div>
                 </div>
@@ -308,9 +326,9 @@
   
             <div class="popup2" id="popup2_t">
               <div class="close_btn">
-                <img src="../images/Close.svg" width 16px id="close_btn2_t" />
+                <img src="../images/icons/Close.svg" width 16px id="close_btn2_t" />
               </div>
-              <img src="../images/success.svg" />
+              <img src="../images/icons/success.svg" />
               <h2>Супер!<br />Ваш запит відправлено</h2>
               <p>
                 Найближчим часом наш менеджер зв’яжеться з вами та проконсультує
@@ -326,22 +344,22 @@
   
       <section id="footer">
         <div class="f1">
-          <img src="../images/logo.svg" id="f_logo" />
+          <img src="../images/icons/logo.svg" id="f_logo" />
           <div class="f1_bottom">
             <div class="f1_facebook">
-              <img src="../images/less_sad_circle.svg" id="f1_circle" />
-              <div class="fb_icon"><img src="../images/facebook.svg" /></div>
+              <img src="../images/icons/lil_circle.svg" id="f1_circle" />
+              <div class="fb_icon"><img src="../images/icons/facebook.svg" /></div>
             </div>
             <div class="f1_insta">
-              <img src="../images/less_sad_circle.svg" id="f1_circle" />
-              <div class="insta_icon"><img src="../images/instagram.svg" /></div>
+              <img src="../images/icons/lil_circle.svg" id="f1_circle" />
+              <div class="insta_icon"><img src="../images/icons/instagram.svg" /></div>
             </div>
           </div>
         </div>
   
         <div class="f2">
           <h3>Послуги</h3>
-          <p>Підбір рішень для автоматизації продажів</p>
+          <a href="auto_dec.html">Підбір рішень для автоматизації продажів</a>
           <p>Впровадження рішень «під ключ»</p>
           <p>Контроль інших інтеграторів</p>
         </div>
@@ -356,14 +374,13 @@
       </section>
   
       <section>
-        <img src="../images/long_line.svg" id="line" />
+        <img src="../images/style_objects/long_line.svg" id="line" />
         <div id="end">
           <p>© ToDoIt Всі права захищені</p>
           <p>Політика конфіденційності</p>
         </div>
       </section>
       
-      <script src="../js/talk_form.js"></script>
       <script src="../js/sub_form.js"></script>
       <script src="../js/expand_blog.js"></script>
       <script src="../js/demo_form.js"></script>

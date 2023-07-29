@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("../font/Gilroy-Regular.eot") format("embedded-opentype"),
+      url("../font/Gilroy-Regular.ttf") format("truetype"),
+      url("../font/Gilroy-Regular.woff") format("woff"),
+      url("../font/Gilroy-Regular.woff2") format("woff2");
+    font-style: normal;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  button,
+  a,
+  textarea,div {
+    font-family: Gilroy;
+    color: var(--black, #141414);
+  }
+  
+  a:hover {
+    color: #29abf5;
+    transition: 0.5s;
+  }
+  
+  .wrapper {
+    width: auto;
+    background-color: #f4f4f4;
+  }
+  
+  section {
+    width: 1440px;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  h4{
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid var(--black, #141414);
+    background-color: white;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: lightgray;
+    transition: 0.5s;
+    border-color: #f4f4f4;
+    color: black;
+  }

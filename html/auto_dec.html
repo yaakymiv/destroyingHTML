@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automatic Decisions</title>
+    <link rel="stylesheet" href="../css/auto_dec.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/nav_bar.css" />
+    <script
+      src="https://kit.fontawesome.com/96681e814c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR  -->
+    <section>
+      <nav>
+        <div class="nav_bar">
+          <ul class="nav_bar_list">
+            <a href="../index.html" id="svg_logo">
+              <img src="../images/icons/logo.svg" id="logo" />
+            </a>
+            <li>
+              <div class="dropdown">
+                <span class="dropbtn"
+                  >Послуги
+                  <img src="../images/icons/arrow_down.svg" id="down" />
+                  <img src="../images/icons/arrow_up.svg" id="up" />
+                </span>
+                <div class="dropdown-content">
+                  <a href="javascript:;">Підбір рішень для автоматизації продажів</a>
+                  <a href="javascript:;">Впровадження рішень «під ключ»</a>
+                  <a href="javascript:;">Контроль інших інтеграторів</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="../index.html#link_about_us">Про нас</a></li>
+            <li><a href="../index.html#cases_top">Кейси</a></li>
+            <li><a href="../index.html#reviews_top">Відгуки</a></li>
+            <li><a href="../html/blog.html">Блог</a></li>
+            <li><a href="../html/contacts.html">Контакти</a></li>
+          </ul>
+
+          <div>
+            <button type="button" id="openButton">Замовити демо</button>
+          </div>
+          <div><p>Ua</p></div>
+          <img src="../images/icons/arrow_down.svg" id="arrow_down" />
+
+          <div class="popup-overlay" id="overlay"></div>
+          <div class="popup1" id="popup1">
+            <div class="close_btn">
+              <img src="../images/icons/Close.svg" id="close_btn1" width 16px />
+            </div>
+            <form class="form" id="order_form">
+              <h2 id="targetElement">Замовити демо</h2>
+              <div class="form_element">
+                <input
+                  type="text"
+                  placeholder="Ім'я *"
+                  id="name"
+                  onkeyup="validateName()"
+                />
+                <div class="error" id="e-name"></div>
+              </div>
+              <div class="form_element" id="num_special">
+                <div class="num_special">
+                  <p>+380</p>
+                  <img src="../images/icons/ukraine.svg" />
+                  <img src="../images/icons/arrow_down.svg" />
+                </div>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="(00) 000-00-00"
+                  onkeyup="validatePhone()"
+                />
+                <div class="error" id="e-phone"></div>
+              </div>
+              <div class="form_element">
+                <input type="text" placeholder="Назва компанії" />
+              </div>
+              <div class="form_element">
+                <input
+                  type="text"
+                  placeholder="E-mail *"
+                  id="email"
+                  onkeyup="validateEmail()"
+                />
+                <div class="error" id="e-email"></div>
+              </div>
+              <div class="form_element">
+                <textarea
+                  placeholder="Опишіть задачу, яку потрібно виконати"
+                ></textarea>
+              </div>
+              <div class="form_element" id="form_bottom">
+                <button id="order_btn" type="button">Замовити</button>
+                <div class="add_file">
+                  <img src="../images/icons/plus.svg" width="10px" />
+                  <h4>Додати файл</h4>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="popup2" id="popup2">
+            <div class="close_btn">
+              <img src="../images/icons/Close.svg" width 16px id="close_btn2" />
+            </div>
+            <img src="../images/icons/success.svg" />
+            <h2>Супер!<br />Ваш запит відправлено</h2>
+            <p>
+              Найближчим часом наш менеджер зв’яжеться з вами та проконсультує
+              по умовам отримання демо
+            </p>
+            <button id="ok">OK</button>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- VISITING CARD -->
+
+    <section id="auto_visit">
+      <div class="auto_visit_left">
+        <h3>від 1000$</h3>
+        <h1>
+          Підбір рішень для <br />
+          автоматизації продажів
+        </h1>
+        <p>
+          Нічого зайвого чи випадкового. Тільки <br />
+          те, що дійсно працює. Наша глибока експертиза <br />
+          і багаторічний досвід дозволяють гарантувати <br />
+          ефективність рішень, які ми пропонуємо.
+        </p>
+        <div>
+          <button type="button" class="consult_btn">Замовити консультацію</button>
+        </div>
+      </div>
+      <div class="auto_visit_right">
+        <img src="../images/style_objects/auto_rect1.svg" id="rect1_auto" />
+        <img src="../images/style_objects/auto_rect2.svg" id="rect2_auto" />
+        <img src="../images/style_objects/auto_rect3.svg" id="rect3_auto" />
+      </div>
+    </section>
+
+    <!-- FOR WHO? -->
+    <div class="wrapper">
+      <section>
+        <div class="for_who_top">
+          <h2>Кому потрібна послуга?</h2>
+        </div>
+        <div class="for_who_bottom">
+          <ul>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>
+                Не віслідковуєте діяльність та <br />
+                ефективність співробітників
+              </p>
+            </li>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>
+                Втрачаєте клієнтів через <br />
+                не автоматизований облік
+              </p>
+            </li>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>Немає воронки продажу, <br />або вона не автематизована</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- STEPS -->
+
+    <section>
+      <div class="steps_top">
+        <h2>Етапи роботи</h2>
+      </div>
+      <div class="steps_bottom">
+        <ul class="steps">
+          <li class="steps_item">
+            <div class="steps_item_top">
+              <img src="../images/style_objects/lil_gray_rect.svg" />
+              <h2>1</h2>
+              <h3>IT-Консалтінг</h3>
+            </div>
+            <ul class="steps_list">
+              <li>
+                Lorem ipsum — це псевдолатинський текст, який використовується у
+                веб-дизайні, типографіці, макеті та поліграфії замість
+                англійської мови, щоб підкреслити елементи дизайну над вмістом.
+              </li>
+              <li>
+                Це зручний інструмент для макетів. Це допомагає окреслити
+                візуальні елементи документа чи презентації, наприклад
+                типографіку, шрифт або макет.
+              </li>
+              <li>
+                Lorem ipsum — це здебільшого частина латинського тексту
+                класичного автора та філософа Цицерона.
+              </li>
+              <li>
+                Його слова та літери були змінені шляхом додавання або
+                вилучення, щоб навмисно зробити його вміст безглуздим; це вже не
+                справжня, правильна чи зрозуміла латиниця. Хоча lorem ipsum все
+                ще нагадує класичну латинь, насправді воно не має жодного
+                значення.
+              </li>
+            </ul>
+          </li>
+          <li class="steps_item">
+            <div class="steps_item_top">
+              <img src="../images/style_objects/lil_gray_rect.svg" />
+              <h2>2</h2>
+              <h3>Впровадження CRM</h3>
+            </div>
+            <ul class="steps_list">
+              <li>
+                Оскільки текст не містить літер K, W або Z, чужих латині, ці та
+                інші часто вставляються випадковим чином, щоб імітувати
+                типографічний вигляд європейських мов, як і диграфи, яких немає
+                в оригіналі.
+              </li>
+              <li>
+                Це зручний інструмент для макетів. Це допомагає окреслити
+                візуальні елементи документа чи презентації, наприклад
+                типографіку, шрифт або макет.
+              </li>
+              <li>
+                Це зручний інструмент для макетів. Це допомагає окреслити
+                візуальні елементи документа чи презентації, наприклад
+                типографіку, шрифт або макет.
+              </li>
+              <li>
+                Lorem ipsum — це здебільшого частина латинського тексту
+                класичного автора та філософа Цицерона.
+              </li>
+            </ul>
+          </li>
+          <li class="steps_item">
+            <div class="steps_item_top">
+              <img src="../images/style_objects/lil_gray_rect.svg" />
+              <h2>3</h2>
+              <h3>Продаж ліцензій</h3>
+            </div>
+            <ul class="steps_list">
+              <li>
+                Текст не містить літер K, W або Z, чужих латині, ці та інші
+                часто вставляються випадковим чином, щоб імітувати типографічний
+                вигляд європейських мов, як і диграфи, яких немає в оригіналі.
+              </li>
+              <li>
+                Слова та літери були змінені шляхом додавання або вилучення, щоб
+                навмисно зробити його вміст безглуздим; це вже не справжня,
+                правильна чи зрозуміла латиниця. Хоча lorem ipsum все ще нагадує
+                класичну латинь, насправді воно не має жодного значення.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET? -->
+    <div class="wrapper">
+      <section>
+        <div class="get_top">
+          <h2>Що ви отримаєте</h2>
+        </div>
+        <div class="get_bottom">
+          <ul>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>Текст 1</p>
+            </li>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>Текст 2</p>
+            </li>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>Текст 3</p>
+            </li>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>Текст 4</p>
+            </li>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>Текст 5</p>
+            </li>
+            <li>
+              <img src="../images/style_objects/def_gray_rect.svg" />
+              <p>Текст 6</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- PROJECT TEAM -->
+
+    <section>
+      <div class="team_top">
+        <h2>Залучена команда</h2>
+      </div>
+      <div class="team_bottom">
+        <ul>
+          <li id="exception">
+            <img src="../images/style_objects/def_circle.svg" />
+            <h3>Project manager</h3>
+          </li>
+          <li>
+            <img src="../images/style_objects/def_circle.svg" />
+            <h3>Developer</h3>
+          </li>
+          <li>
+            <img src="../images/style_objects/def_circle.svg" />
+            <h3>Developer</h3>
+          </li>
+          <li>
+            <img src="../images/style_objects/def_circle.svg" />
+            <h3>Developer</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+     <!-- LETS TALK-->
+     <div class="wrapper">
+        <section>
+          <div class="lets_talk">
+            <h2>Давайте обговоримо ваш проект?</h2>
+            <div class="LT_phone">
+              <p>+38 (093) 777-00-44</p>
+              <p>+38 (050) 777-00-44</p>
+            </div>
+  
+            <p>hello@todoit.com</p>
+            <button type="button" id="talk_btn">Залишити заявку</button>
+            <div class="popup-overlay" id="overlay_talk"></div>
+            <div class="popup1" id="popup1_t">
+              <div class="close_btn">
+                <img src="../images/icons/Close.svg" id="close_btn1_t" width 16px />
+              </div>
+              <form class="form" id="talk_form">
+                <h2>Замовити демо</h2>
+                <div class="form_element">
+                  <input
+                    type="text"
+                    placeholder="Ім'я *"
+                    id="name_t"
+                    onkeyup="validateNameT()"
+                  />
+                  <div class="error" id="e-name-t"></div>
+                </div>
+                <div class="form_element" id="num_special">
+                  <div class="num_special">
+                    <p>+380</p>
+                    <img src="../images/icons/ukraine.svg" />
+                    <img src="../images/icons/arrow_down.svg" />
+                  </div>
+                  <input
+                    type="text"
+                    id="phone_t"
+                    placeholder="(00) 000-00-00"
+                    onkeyup="validatePhoneT()"
+                  />
+                  <div class="error" id="e-phone-t"></div>
+                </div>
+                <div class="form_element">
+                  <input type="text" placeholder="Назва компанії" />
+                </div>
+                <div class="form_element">
+                  <input
+                    type="text"
+                    placeholder="E-mail *"
+                    id="email_t"
+                    onkeyup="validateEmailT()"
+                  />
+                  <div class="error" id="e-email-t"></div>
+                </div>
+                <div class="form_element">
+                  <textarea
+                    placeholder="Опишіть задачу, яку потрібно виконати"
+                  ></textarea>
+                </div>
+                <div class="form_element" id="form_bottom">
+                  <button id="talk_btn_o" type="button">Замовити</button>
+                  <div class="add_file">
+                    <img src="../images/icons/plus.svg" width="10px" />
+                    <h4>Додати файл</h4>
+                  </div>
+                </div>
+              </form>
+            </div>
+  
+            <div class="popup2" id="popup2_t">
+              <div class="close_btn">
+                <img src="../images/icons/Close.svg" width 16px id="close_btn2_t" />
+              </div>
+              <img src="../images/icons/success.svg" />
+              <h2>Супер!<br />Ваш запит відправлено</h2>
+              <p>
+                Найближчим часом наш менеджер зв’яжеться з вами та проконсультує
+                по умовам отримання демо
+              </p>
+              <button id="ok_t">OK</button>
+            </div>
+          </div>
+        </section>
+      </div>
+  
+      <!-- FOOTER-->
+  
+      <section id="footer">
+        <div class="f1">
+          <img src="../images/icons/logo.svg" id="f_logo" />
+          <div class="f1_bottom">
+            <div class="f1_facebook">
+              <img src="../images/icons/lil_circle.svg" id="f1_circle" />
+              <div class="fb_icon"><img src="../images/icons/facebook.svg" /></div>
+            </div>
+            <div class="f1_insta">
+              <img src="../images/icons/lil_circle.svg" id="f1_circle" />
+              <div class="insta_icon"><img src="../images/icons/instagram.svg" /></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="f2">
+          <h3>Послуги</h3>
+          <a href="auto_dec.html">Підбір рішень для автоматизації продажів</a>
+          <p>Впровадження рішень «під ключ»</p>
+          <p>Контроль інших інтеграторів</p>
+        </div>
+  
+        <div class="f3">
+          <a href="../index.html#cases_top">Кейси</a>
+          <a href="../index.html#reviews_top">Відгуки</a>
+          <a href="../index.html#link_about_us">Про нас</a>
+          <a href="blog.html">Блог</a>
+          <a href="contacts.html">Контакти</a>
+        </div>
+      </section>
+  
+      <section>
+        <img src="../images/style_objects/long_line.svg" id="line" />
+        <div id="end">
+          <p>© ToDoIt Всі права захищені</p>
+          <p>Політика конфіденційності</p>
+        </div>
+      </section>  
+
+    <script src="../js/demo_form.js"></script>
+    <script src="../js/talk_form.js"></script>
+  </body>
+</html>

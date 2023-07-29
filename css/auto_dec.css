@@ -1,0 +1,177 @@
+/* VISIT CARD*/
+
+#auto_visit {
+  display: flex;
+}
+
+.auto_visit_left {
+  margin: 147px 115px 147px 165px;
+}
+
+.auto_visit_left h3 {
+  width: 78px;
+  margin-bottom: 30px;
+}
+
+.auto_visit_left h1 {
+  width: 455px;
+  height: 88px;
+  line-height: 110%;
+}
+
+.auto_visit_left p {
+  width: 328px;
+  height: 68px;
+  margin-top: 20px;
+}
+
+.auto_visit_left button {
+  width: 239px;
+  height: 50px;
+  color: white;
+  background: var(--black, #141414);
+  margin-top: 40px;
+}
+
+.auto_visit_right {
+  display: flex;
+  flex-direction: row;
+}
+
+.auto_visit_right img {
+  position: relative;
+}
+
+#rect1_auto {
+  top: -35px;
+  z-index: 0;
+}
+
+#rect2_auto {
+  left: -90px;
+  z-index: -1;
+}
+
+#rect3_auto {
+  left: -180px;
+  top: 130px;
+  z-index: -2;
+}
+
+/* FOR WHO */
+
+.for_who_top h2 {
+  padding: 80px 932px 0px 165px;
+  background-color: #f4f4f4;
+}
+
+.for_who_bottom ul {
+  display: grid;
+  padding: 30px 165px 80px 165px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  list-style: none;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.for_who_bottom li {
+  width: 310px;
+  height: 77px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+}
+
+.for_who_bottom img {
+  height: 70px;
+  width: 70px;
+}
+
+/* STEPS */
+
+.steps_top h2 {
+  margin: 120px 1083px 0px 165px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(1, 3fr);
+  margin: 30px 165px 120px 545px;
+  row-gap: 30px;
+  list-style: none;
+}
+
+.steps_item {
+  position: relative;
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.steps_item_top {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+  align-items: center;
+}
+
+.steps_item_top h2 {
+  position: absolute;
+  top: 38px;
+  left: 49px;
+}
+
+.steps_list {
+  list-style: inside;
+}
+
+/* WHAT DO YOU GET */
+
+.get_top h2 {
+  padding: 80px 1029px 0px 165px;
+  background-color: #f4f4f4;
+}
+
+.get_bottom ul {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  padding: 30px 165px 80px;
+  background-color: #f4f4f4;
+  row-gap: 30px;
+  list-style: none;
+}
+
+.get_bottom li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.get_bottom p {
+ font-size: 16px;
+}
+
+/* PROJECT TEAM */
+
+.team_top h2 {
+  margin: 80px 1029px 0px 165px;
+  width: 269px;
+}
+
+.team_bottom ul {
+  display: flex;
+  margin: 30px 250px 120px 222px;
+  gap: 180px;
+  list-style: none;
+}
+
+.team_bottom li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
